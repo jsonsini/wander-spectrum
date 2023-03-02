@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">WanderSpectrum</string>
+    <string name="live_wallpaper_name">WanderSpectrum Live Wallpaper</string>
+    <string name="preference_file_key">wanderspectrum_pref</string>
+    <string name="scroll_velocity_key">wanderspectrum_scroll_velocity</string>
+    <string name="pixel_size_key">wanderspectrum_pixel_size</string>
+    <string name="frame_rate_key">wanderspectrum_frame_rate</string>
+    <string name="minimum_direction_switch_seconds_key">wanderspectrum_minimum_direction_switch_seconds</string>
+    <string name="scroll_velocity_label">Scroll Velocity</string>
+    <string name="scroll_velocity_value">@string/scroll_velocity_default</string>
+    <string name="pixel_size_label">Pixel Size</string>
+    <string name="pixel_size_value">@string/pixel_size_default</string>
+    <string name="frame_rate_label">Frame Rate</string>
+    <string name="frame_rate_value">@string/frame_rate_default</string>
+    <string name="minimum_direction_switch_seconds_label">Minimum Direction Switch Seconds</string>
+    <string name="minimum_direction_switch_seconds_value">@string/minimum_direction_switch_seconds_default</string>
+    <string name="save_button_label">Save</string>
+    <string name="reset_to_default_button_label">Reset</string>
+    <string name="scroll_velocity_default">10</string>
+    <string name="pixel_size_default">8</string>
+    <string name="frame_rate_default">60</string>
+    <string name="minimum_direction_switch_seconds_default">5</string>
+</resources>

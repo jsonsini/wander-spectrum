@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+WanderSpectrum is an Android live wallpaper that animates a vertical stripe aligned down the center
+of the screen displaying the visible spectrum in a cyclic pattern.  The animation is randomly
+generated to follow an approximate Brownian motion pattern.  The speed of movement, effective pixel
+size, frame rate of animation, and minimum duration to switch direction of movement are all
+configurable.
+
+WanderSpectrum is distributed under the GNU Affero General Public License v3 as open source software
+with attribution required.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero
+General Public License v3 for more details.
+
+Copyright (C) 2023 John Sonsini. All rights reserved. Source code available under the AGPLv3.
+-->
+<wallpaper
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:priority="1"
+    android:cropToPadding="true"
+    android:resizeable="true"
+    android:visible="true"
+    android:showMetadataInPreview="true"
+    android:settingsActivity="com.jsonsini.wanderspectrum.SettingsActivity" />

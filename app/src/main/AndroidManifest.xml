@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+WanderSpectrum is an Android live wallpaper that animates a vertical stripe aligned down the center
+of the screen displaying the visible spectrum in a cyclic pattern.  The animation is randomly
+generated to follow an approximate Brownian motion pattern.  The speed of movement, effective pixel
+size, frame rate of animation, and minimum duration to switch direction of movement are all
+configurable.
+
+WanderSpectrum is distributed under the GNU Affero General Public License v3 as open source software
+with attribution required.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero
+General Public License v3 for more details.
+
+Copyright (C) 2023 John Sonsini. All rights reserved. Source code available under the AGPLv3.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wanderspectrum">
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.jsonsini.wanderspectrum.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.jsonsini.wanderspectrum.SettingsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.jsonsini.wanderspectrum.WanderSpectrumWallpaper"
+            android:exported="true"
+            android:label="@string/live_wallpaper_name"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/wallpaper" />
+        </service>
+    </application>
+</manifest>

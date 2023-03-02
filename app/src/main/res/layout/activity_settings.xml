@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+WanderSpectrum is an Android live wallpaper that animates a vertical stripe aligned down the center
+of the screen displaying the visible spectrum in a cyclic pattern.  The animation is randomly
+generated to follow an approximate Brownian motion pattern.  The speed of movement, effective pixel
+size, frame rate of animation, and minimum duration to switch direction of movement are all
+configurable.
+
+WanderSpectrum is distributed under the GNU Affero General Public License v3 as open source software
+with attribution required.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
+even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero
+General Public License v3 for more details.
+
+Copyright (C) 2023 John Sonsini. All rights reserved. Source code available under the AGPLv3.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Scroll Velocity SeekBar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/scroll_velocity_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scroll_velocity_label" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="16dp">
+
+            <SeekBar
+                android:id="@+id/scroll_velocity_seek_bar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:min="5"
+                android:max="40" />
+
+            <TextView
+                android:id="@+id/scroll_velocity_text_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scroll_velocity_value" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Pixel Size SeekBar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pixel_size_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pixel_size_label" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="16dp">
+
+            <SeekBar
+                android:id="@+id/pixel_size_seek_bar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:min="1"
+                android:max="32" />
+
+            <TextView
+                android:id="@+id/pixel_size_text_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pixel_size_value" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Frame Rate SeekBar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/frame_rate_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/frame_rate_label" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="16dp">
+
+            <SeekBar
+                android:id="@+id/frame_rate_seek_bar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:min="30"
+                android:max="120" />
+
+            <TextView
+                android:id="@+id/frame_rate_text_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/frame_rate_value" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Minimum Direction Switch Seconds SeekBar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/minimum_direction_switch_seconds_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/minimum_direction_switch_seconds_label" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="16dp">
+
+            <SeekBar
+                android:id="@+id/minimum_direction_switch_seconds_seek_bar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:min="1"
+                android:max="60" />
+
+            <TextView
+                android:id="@+id/minimum_direction_switch_seconds_text_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minimum_direction_switch_seconds_value" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/save_button_label" />
+
+    <!-- Reset to Default Button -->
+    <Button
+        android:id="@+id/reset_to_default_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/reset_to_default_button_label" />
+
+</LinearLayout>
