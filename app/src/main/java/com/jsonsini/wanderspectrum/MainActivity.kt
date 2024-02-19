@@ -12,7 +12,7 @@
  * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Affero General Public License v3 for more details.
  *
- * Copyright (C) 2023 John Sonsini. All rights reserved. Source code available under the AGPLv3.
+ * Copyright (C) 2024 John Sonsini. All rights reserved. Source code available under the AGPLv3.
  */
 package com.jsonsini.wanderspectrum
 
